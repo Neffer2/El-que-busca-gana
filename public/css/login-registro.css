@@ -1,0 +1,32 @@
+.main-register-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/fondo_login_registro.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    max-width: 750px;
+    margin-left: 15%;
+}
+
+.register-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 30px;
+}

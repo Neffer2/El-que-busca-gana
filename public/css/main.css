@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-pink: #ea008a;
+    --primary-blue: #0054a4;
+    --primary-black: #191613ff;
+    --primary-gold: #c3a52d;
+    --secondary-gold: #c5aa2e;
+    --thrird-gold: #edda42;
+    --fourth-gold: #fcf28c;
+}
