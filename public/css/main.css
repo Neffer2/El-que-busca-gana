@@ -2,6 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'MaisonNeueBold', sans-serif;
+    color: var(--primary-black);
+}
+
+@font-face {
+    font-family: 'MaisonNeueBold';
+    src: url('../fonts/FontsFree-Net-Maison-Neue-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MaisonNeueExtendedExtraBold';
+    src: url('../fonts/MaisonNeueExtended-ExtraBold.otf') format('opentype');
 }
 
 :root {
