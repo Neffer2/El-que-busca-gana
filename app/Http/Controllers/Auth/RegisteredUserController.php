@@ -20,6 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+        // Retorna la vista de registro
         return view('auth.register');
     }
 
@@ -32,14 +33,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'gpid' => ['required', 'string', 'max:255'],
+            'cedula' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'terms' => ['accepted'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'gpid' => $request->gpid,
+            'cedula' => $request->cedula,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'terms' => $request->has('terms'),
         ]);
 
         event(new Registered($user));

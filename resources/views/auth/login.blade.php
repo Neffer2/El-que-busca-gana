@@ -29,12 +29,13 @@
                 </label>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-link">
                 @if (Route::has('password.request'))
                     <a class="form-link" href="{{ route('password.request') }}">
-                        ¿Olvidaste tu contraseña?
+                        ¿Has olvidado tu contraseña?
                     </a>
                 @endif
+                <p class="form-link-p">¿No tienes una cuenta?<a href="/register"> Registrate aquí</a></p>
             </div>
 
             <div class="form-group-button">

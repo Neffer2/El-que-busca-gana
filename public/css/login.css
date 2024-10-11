@@ -77,6 +77,16 @@
     margin-bottom: 15px;
 }
 
+.form-group-link {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-label {
     display: block;
     margin-bottom: 5px;
@@ -116,10 +126,24 @@
 
 .form-link {
     color: var(--primary-black);
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 14px;
     text-align: right;
     display: block;
+}
+
+.form-link-p {
+    color: var(--primary-black);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+}
+
+.form-link-p a {
+    text-decoration: none;
+    color: var(--primary-pink);
+    cursor: pointer;
 }
 
 .form-group-button {
