@@ -15,7 +15,7 @@
 
 <body>
     <div class="main-register-login-container">
-        <div class="logo-container">
+        <div class="register-logo-container">
             <img src="{{ asset('assets/logo_info.png') }}" alt="Fondo Login Registro">
         </div>
         <div class="register-login-container">

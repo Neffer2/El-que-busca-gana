@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     background-image: url(../assets/fondo_login_registro.jpg);
     background-size: cover;
     background-position: center;
@@ -39,6 +39,13 @@
     align-items: center;
     width: 50%;
     padding: 30px;
+}
+
+.login-container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 .form-login-register-container {
@@ -165,4 +172,53 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'MaisonNeueExtendedExtraBold', sans-serif;
+}
+
+/* Media Query Mobile */
+
+@media screen and (max-width: 768px) {
+    .main-register-login-container {
+        flex-direction: column;
+        height: 100%;
+        background-image: url(../assets/fondo_login_registro_mobile.jpg);
+        background-position: 70%;
+    }
+
+    .logo-container {
+        width: 100%;
+    }
+
+    .logo-container img {
+        width: 80%;
+        margin-right: 15%;
+    }
+
+    .register-login-container {
+        width: 100%;
+    }
+
+    .login-container-main {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 33%;
+    }
+
+    .form-login-register-container {
+        width: 100%;
+        padding: 20px;
+        min-width: 0;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .form-input {
+        padding: 5px;
+    }
+
+    .form-button {
+        padding: 5px;
+        font-size: 16px;
+    }
 }

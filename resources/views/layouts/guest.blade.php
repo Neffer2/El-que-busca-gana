@@ -15,8 +15,7 @@
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
     <body class="">
-        <div class="">
-
+        <div class="login-container-main">
             <div class="form-login-register-container">
                 {{ $slot }}
             </div>

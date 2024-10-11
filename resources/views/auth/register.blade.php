@@ -8,7 +8,7 @@
 
             <!-- Name -->
             <div class="register-form-group">
-                <label for="name" class="register-form-label">Nombre</label>
+                <label for="name" class="register-form-label">Nombre Completo</label>
                 <input id="name" class="register-form-input" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                 <x-input-error :messages="$errors->get('name')" class="register-form-error" />
             </div>
