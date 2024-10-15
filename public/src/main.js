@@ -4,11 +4,11 @@ import { Game } from './scenes/game.js';
 import { GameOver } from './scenes/gameover.js';
 
 const config = {
-    type: Phaser.AUTO, 
+    type: Phaser.AUTO,
     width: 1920,
     height: 1080,
     parent: 'game-container',
-    scale: { 
+    scale: {
         mode: Phaser.Scale.FIT,
         fullscreenTarget: 'game-container',
     },
@@ -20,7 +20,7 @@ const config = {
             // debug: true
         }
     },
-    backgroundColor: '#fff' // Aquí defines el color de fondo
+    transparent: true
 };
- 
+
 export const game = new Phaser.Game(config);

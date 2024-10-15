@@ -1,5 +1,5 @@
 let width, height, mContext;
-let ruleta, puntero, spinButton, bars;
+let ruleta, puntero, spinButton, bars, bglight;
 // Divisiones de la ruleta
 let divisiones = 6, circumference = 340;
 
@@ -63,6 +63,8 @@ export class Game extends Phaser.Scene {
             //     'Rotation: ' + ruleta.rotation.toFixed(2)
             // ]);
         }
+
+        if (bglight){bglight.angle += 0.5;}
     }
 
     /*
@@ -133,7 +135,7 @@ export class Game extends Phaser.Scene {
         width = this.game.config.width;
         height = this.game.config.height;
 
-        let background = this.add.image((width/2), (height/2), 'background').setScale(1);
+        // let background = this.add.image((width/2), (height/2), 'background').setScale(1);
         let logo = this.add.image((width/12), (width/12), 'logo').setScale(1.5);
         let base = this.add.image((width/2), (height/2) + 415, 'base');
 
@@ -159,7 +161,7 @@ export class Game extends Phaser.Scene {
     popUp(premio){
         mContext.add.image((width/2), (height/2), 'bg-pop').setScale(1);
         mContext.add.image((width/2), (height/2), `bgp-${premio}`).setScale(1);
-        let bglight = mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
-        mContext.add.image((width/2), (height/2), `p-${premio}`).setScale(1);
+        bglight = mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
+        mContext.add.image((width/2) + 20, (height/2), `p-${premio}`).setScale(1);
     }
 }

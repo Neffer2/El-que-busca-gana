@@ -7,7 +7,6 @@
     <title>GANA COMO LOCO</title>
 </head>
 <body>
-    <div class="confetti"></div>
     <div id="game-container"></div>
 
     <script type="module" src="{{ asset('src/phaser.min.js') }}"></script>
