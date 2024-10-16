@@ -6,7 +6,7 @@ export class Preloader extends Phaser.Scene {
 
     preload ()
     {
-        this.load.setPath('../../assets');
+        this.load.setPath('../../assets/mobile');
         this.load.image('background', 'bg.jpg');
         this.load.image('bg-pop', 'bg-pop.png');
         this.load.image('bg-light', 'bg-light.png');
@@ -22,10 +22,10 @@ export class Preloader extends Phaser.Scene {
         this.load.image('base', 'base.png');
         this.load.image('girarBtn', 'button.png');
         this.load.image('detenerBtn', 'button-stop.png');
-        this.load.spritesheet('luces', 'luces-spritesheet.png', { frameWidth: 797.5, frameHeight: 792 });
+        this.load.spritesheet('luces', 'luces-spritesheet.png', { frameWidth: 653.5, frameHeight: 654 });
 
         let rect2 = this.make.graphics().fillStyle(0xFFFFFF).fillRect(50, 50, 150, 25);
-        rect2.generateTexture('rectangle', 340, 25);
+        rect2.generateTexture('rectangle', 280, 25);
     }
 
     create ()

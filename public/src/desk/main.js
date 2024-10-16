@@ -7,7 +7,7 @@ const config = {
     type: Phaser.AUTO,
     width: 1920,
     height: 1080,
-    parent: 'game-container',
+    parent: 'game-container-desk',
     scale: {
         mode: Phaser.Scale.FIT,
         fullscreenTarget: 'game-container',

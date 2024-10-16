@@ -1,7 +1,7 @@
 let width, height, mContext;
 let ruleta, puntero, spinButton, bars, bglight;
 // Divisiones de la ruleta
-let divisiones = 6, circumference = 340;
+let divisiones = 6, circumference = 280;
 
 let premios = [
     '3', '3',
@@ -29,13 +29,13 @@ export class Game extends Phaser.Scene {
 
         spinButton.on('pointerdown', function (pointer)
         {
-            spinButton.setScale(1.3);
+            spinButton.setScale(1.2);
             if (!rotate){
                 mContext.rotarConstante();
                 spinButton.setTexture('detenerBtn');
             }else {
                 mContext.detener();
-                // spinButton.disableInteractive();
+                spinButton.disableInteractive();
             }
 
             // game.scene.keys.gameScene.rotar();
@@ -47,7 +47,7 @@ export class Game extends Phaser.Scene {
         });
 
         spinButton.on('pointerout', () => {
-            spinButton.setScale(1.2);
+            spinButton.setScale(1.1);
         });
     }
 
@@ -90,7 +90,7 @@ export class Game extends Phaser.Scene {
 
     getPremio(){
         // Hace rotar las barras al ángulo del a ruleta (RotateAroundDistance funciona con radianes)
-        Phaser.Actions.RotateAroundDistance(bars, { x: (width/2), y: (height/2) - 50 }, ruleta.rotation, circumference);
+        Phaser.Actions.RotateAroundDistance(bars, { x: (width/2), y: (height/2) + 75 }, ruleta.rotation, circumference);
         /*
             El comportamiento normal del evento es ser ejecutado todo el tiempo mientrras este se cumpla.
             Con esto logro ejecutarlo solo una vez.
@@ -136,23 +136,23 @@ export class Game extends Phaser.Scene {
         height = this.game.config.height;
 
         // let background = this.add.image((width/2), (height/2), 'background').setScale(1);
-        let logo = this.add.image((width/12), (width/12), 'logo').setScale(1.5);
-        let base = this.add.image((width/2), (height/2) + 415, 'base');
+        let logo = this.add.image((width/2), (height/2) - 450, 'logo').setScale(1.3);
+        let base = this.add.image((width/2), (height/2) + 475, 'base');
 
-        ruleta = this.add.sprite((width/2), (height/2) - 45, 'ruleta');
-        let luces = this.add.sprite((width/2) - 3, (height/2) - 50, 'luces');
-        puntero = this.physics.add.sprite((width/2), (height/7) - 10, 'puntero');
-        puntero.setSize(true, 100, 140);
-        spinButton = this.physics.add.sprite((width/2), (height/2) - 45, 'girarBtn').setScale(1.2).setInteractive();
+        ruleta = this.add.sprite((width/2), (height/2) + 75, 'ruleta');
+        let luces = this.add.sprite((width/2) - 3, (height/2) + 68, 'luces');
+        puntero = this.physics.add.sprite((width/2), (height/3), 'puntero').setScale(.8);
+        puntero.setSize(true, 100, 120);
+        spinButton = this.physics.add.sprite((width/2), (height/2) + 76, 'girarBtn').setScale(1.1).setInteractive();
 
         bars = this.setBars(divisiones, this);
-        const circle = new Phaser.Geom.Circle((width/2), (height/2) - 50, circumference);
+        const circle = new Phaser.Geom.Circle((width/2), (height/2) + 75, circumference);
         Phaser.Actions.PlaceOnCircle(bars, circle, 0);
 
         this.anims.create({
             key: 'casino-lights',
             frames: this.anims.generateFrameNumbers('luces', { start: 0, end: 1 }),
-            frameRate: 5,
+            frameRate: 7,
             repeat: -1
         });
         luces.anims.play('casino-lights', true);
