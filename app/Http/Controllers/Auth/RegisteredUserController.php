@@ -36,6 +36,7 @@ class RegisteredUserController extends Controller
             'gpid' => ['required', 'string', 'max:255'],
             'cedula' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'address' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'terms' => ['accepted'],
         ]);
@@ -45,6 +46,7 @@ class RegisteredUserController extends Controller
             'gpid' => $request->gpid,
             'cedula' => $request->cedula,
             'email' => $request->email,
+            'address' => $request->address,
             'password' => Hash::make($request->password),
             'terms' => $request->has('terms'),
         ]);

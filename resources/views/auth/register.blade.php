@@ -34,6 +34,13 @@
                 <x-input-error :messages="$errors->get('email')" class="register-form-error" />
             </div>
 
+            <!-- Address -->
+            <div class="register-form-group">
+                <label for="address" class="register-form-label">Direcci&oacute;n de entrega</label>
+                <input id="address" class="register-form-input" type="text" name="address" :value="old('address')" required autocomplete="address" />
+                <x-input-error :messages="$errors->get('address')" class="register-form-error" />
+            </div>
+
             <!-- Password -->
             <div class="register-form-group">
                 <label for="password" class="register-form-label">Contraseña</label>
