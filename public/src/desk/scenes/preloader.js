@@ -22,8 +22,8 @@ export class Preloader extends Phaser.Scene {
         this.load.image('base', 'base.png');
         this.load.image('girarBtn', 'button.png');
         this.load.image('detenerBtn', 'button-stop.png');
-        this.load.image('bg-cj', 'bg-cj.png');
-        this.load.image('cj', 'cj.png');
+        this.load.image('bg-cj', 'bg_cj.png');
+        this.load.image('cj', 'cj_.png');
         this.load.image('x-cj', 'x-cj.png');
         this.load.spritesheet('luces', 'luces-spritesheet.png', { frameWidth: 797.5, frameHeight: 792 });
 
