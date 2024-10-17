@@ -10,7 +10,7 @@ let premios = [
 ];
 
 let rotate = false;
-
+let enablePost = true;
 /* Velocidad */
 let velocidad = 10;
 let valocity_handler = true;
@@ -99,17 +99,24 @@ export class Game extends Phaser.Scene {
             this.physics.add.collider(elem, puntero, function(bar = elem){
                 bar.disableBody(true, true);
                 setTimeout(() => {
-                    mContext.popUp(bar.premio);
-                    axios.post('/storePremio', {
-                        user: userId,
-                        premio: bar.premio
-                    })
-                    .then(function (response) {
-                        console.log(response);
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
+                    if (enablePost){
+                        enablePost = false;
+                        axios.post('/storePremio', {
+                            premio: bar.premio
+                        })
+                        .then(function (response) {
+                            let data = response.data;
+                            if (data.status === 'success'){
+                                mContext.popUp(bar.premio);
+                            }else if (data.status === 255){
+                                alert(data.message);
+                                location.reload();
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    }
                 }, 500);
             });
         });
@@ -172,5 +179,8 @@ export class Game extends Phaser.Scene {
         mContext.add.image((width/2), (height/2), `bgp-${premio}`).setScale(1);
         bglight = mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
         mContext.add.image((width/2) + 20, (height/2), `p-${premio}`).setScale(1);
+        setTimeout(() => {
+            location.reload();
+        }, 5000);
     }
 }
