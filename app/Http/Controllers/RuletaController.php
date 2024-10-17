@@ -13,7 +13,7 @@ class RuletaController extends Controller
         if (auth()->user()->estado_id != 1) {return redirect()->route('logout');}
 
         return view('dashboard');
-    } 
+    }
 
     public function getPremio(Request $request)
     {
@@ -28,7 +28,7 @@ class RuletaController extends Controller
         if ($premio->stock > 0) {
             $premio->stock = $premio->stock - 1;
             $premio->save();
- 
+
             $registro_premio = new RegistroPremio;
             $registro_premio->user_id = auth()->user()->id;
             $registro_premio->premio_id = $request->premio;
@@ -40,7 +40,5 @@ class RuletaController extends Controller
 
             return response()->json(['status' => 'success']);
         }
-
-        
     }
 }
