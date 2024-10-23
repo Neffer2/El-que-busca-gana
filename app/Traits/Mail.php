@@ -20,11 +20,11 @@ trait Mail
             $mail->Password   = env('MAIL_PASSWORD');
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = env('MAIL_PORT', 587);
- 
+
             //Recipients
             $mail->setFrom(env('MAIL_USERNAME'), 'PepsiCO');
             $mail->addAddress(auth()->user()->email, auth()->user()->name);
-            
+
             //Content
             $mail->isHTML(true);
             $mail->Subject = "Notifiacion - Gana Como Loco";
