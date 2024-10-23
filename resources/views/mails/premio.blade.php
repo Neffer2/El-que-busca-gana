@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="{{ asset("assets/Mailing/$premio") }}" alt="">
+    <img src="{{ asset("assets/Mailing/$premio->mail") }}" alt="">
 </body>
 </html>
