@@ -15,12 +15,9 @@ use App\Http\Controllers\RuletaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::post('/storePremio', [RuletaController::class, 'getPremio'])->name('user.store');
 Route::get('/dashboard', [RuletaController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [RuletaController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

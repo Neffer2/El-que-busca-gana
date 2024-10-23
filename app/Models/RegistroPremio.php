@@ -9,4 +9,14 @@ class RegistroPremio extends Model
 {
     use HasFactory;
     protected $table = 'registro_premios';
+
+    public function premio()
+    {
+        return $this->belongsTo(Premio::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

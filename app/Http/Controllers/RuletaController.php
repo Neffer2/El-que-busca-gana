@@ -5,14 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Premio;
 use App\Models\RegistroPremio;
+use App\Traits\Mail;
 
 class RuletaController extends Controller
 {
+    use Mail;
+
     public function index()
     {
-        if (auth()->user()->estado_id != 1) {return redirect()->route('logout');}
+        if (auth()->user()->estado_id != 1) {
+            $premios = RegistroPremio::where('user_id', auth()->user()->id)->get();
+            return view('dashboard', ['premios' => $premios]);
+        }
 
-        return view('dashboard');
+        return view('ruleta');
     }
 
     public function getPremio(Request $request)
@@ -37,6 +43,8 @@ class RuletaController extends Controller
             $user = auth()->user();
             $user->estado_id = 3;
             $user->save();
+
+            $this->mailPremio($premio);
 
             return response()->json(['status' => 'success']);
         }

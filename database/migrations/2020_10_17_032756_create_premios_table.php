@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('premios', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
+            $table->string('detalles');
             $table->integer('stock');
+            $table->string('mail');
             $table->timestamps();
         });
     }

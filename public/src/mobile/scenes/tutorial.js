@@ -17,9 +17,10 @@ export class Tutorial extends Phaser.Scene {
         height = this.game.config.height;
         mContext = this;
 
+        mContext.add.image((width/2), (height/2), 'bg-pop').setScale(1);
         mContext.add.image((width/2), (height/2), 'bg-cj').setScale(1);
-        mContext.add.image((width/2), (height/2) + 80, 'cj').setScale(1);
-        let x = mContext.add.image((width/2) + 220, (height/2) - 360, 'x-cj').setInteractive();
+        mContext.add.image((width/2), (height/2) + 120, 'cj').setScale(1);
+        let x = mContext.add.image((width/2) + 240, (height/2) - 450, 'x-cj').setInteractive();
 
         x.on('pointerdown', function (pointer)
         {

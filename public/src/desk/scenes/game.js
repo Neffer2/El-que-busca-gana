@@ -178,7 +178,7 @@ export class Game extends Phaser.Scene {
         mContext.add.image((width/2), (height/2), 'bg-pop').setScale(1);
         mContext.add.image((width/2), (height/2), `bgp-${premio}`).setScale(1);
         bglight = mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
-        mContext.add.image((width/2) + 20, (height/2), `p-${premio}`).setScale(1);
+        mContext.add.image((width/2) + 20, (height/2) - 50, `p-${premio}`).setScale(1);
         setTimeout(() => {
             location.reload();
         }, 5000);
