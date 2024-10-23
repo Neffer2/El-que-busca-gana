@@ -22,12 +22,13 @@ trait Mail
             $mail->Port       = env('MAIL_PORT', 587);
 
             //Recipients
-            $mail->setFrom(env('MAIL_USERNAME'), 'PepsiCO');
+            $mail->setFrom(env('MAIL_USERNAME'), 'GanaComoLoco');
             $mail->addAddress(auth()->user()->email, auth()->user()->name);
 
             //Content
             $mail->isHTML(true);
-            $mail->Subject = "Notifiacion - Gana Como Loco";
+            $mail->CharSet = 'UTF-8';
+            $mail->Subject = "¡Tenemos noticias sobre tu premio!";
             $mail->Body    = view('mails.premio', ['premio' => $premio]);
             $mail->AltBody = "Felicidades, haz ganado el premio Kit 1";
 

@@ -27,7 +27,7 @@ class RuletaController extends Controller
         if ($premio->stock < 1){
             return response()->json([
                 'status' => 255, // No stock
-                'message' => 'Opps, este premio no cuenta con Stock disponible, inténtalo de nuevo.'
+                'message' => 'Opps, por el momento no tenemos disponibilidad de este premio. Pero no te preocupes, puedes seleccionar cualinténtalo de nuevo.'
             ]);
         }
 

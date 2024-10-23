@@ -35,7 +35,9 @@ export class Game extends Phaser.Scene {
                 spinButton.setTexture('detenerBtn');
             }else {
                 mContext.detener();
-                // spinButton.disableInteractive();
+                setTimeout(() => {
+                    spinButton.disableInteractive();
+                }, 100);
             }
 
             // game.scene.keys.gameScene.rotar();

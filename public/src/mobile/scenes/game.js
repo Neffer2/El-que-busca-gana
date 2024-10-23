@@ -36,7 +36,9 @@ export class Game extends Phaser.Scene {
                 spinButton.setTexture('detenerBtn');
             }else {
                 mContext.detener();
-                spinButton.disableInteractive();
+                setTimeout(() => {
+                    spinButton.disableInteractive();
+                }, 100);
             }
 
             // game.scene.keys.gameScene.rotar();
@@ -112,7 +114,7 @@ export class Game extends Phaser.Scene {
                             }else if (data.status === 255){
                                 alert(data.message);
                                 location.reload();
-                            } 
+                            }
                         })
                         .catch(function (error) {
                             console.log(error);
