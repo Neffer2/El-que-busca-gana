@@ -15,7 +15,10 @@ class RuletaController extends Controller
     {
         if (auth()->user()->estado_id != 1) {
             $premios = RegistroPremio::where('user_id', auth()->user()->id)->get();
-            return view('dashboard', ['premios' => $premios]);
+
+            $premios_data = Premio::all();
+
+            return view('dashboard', ['premios' => $premios, 'premios_data' => $premios_data]);
         }
 
         return view('ruleta');

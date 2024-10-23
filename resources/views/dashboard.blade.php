@@ -13,46 +13,33 @@
 <body>
     <div class="main-home-container">
         <div class="logo-container-desktop">
-            <img src=" {{ asset('assets/logo.png') }}" alt="">
+            <img src="{{ asset('assets/logo.png') }}" alt="">
         </div>
 
         <div class="info-container">
             <div class="logo-container">
-                <img src=" {{ asset('assets/logo.png') }}" alt="">
+                <img src="{{ asset('assets/logo.png') }}" alt="">
             </div>
             <div class="como-jugar">
                 <img src="{{ asset('assets/home_como_jugar.png') }}" alt="">
             </div>
             <div class="kit-container">
-                <div class="kit">
-                    <div class="kit-img">
-                        <img src="{{ asset('assets/home_kit_1.png') }}" alt="">
+                @foreach ($premios_data as $premio_data)
+                    <div class="kit">
+                        <div class="kit-img">
+                            <img src="{{ asset('assets/home_kit_' . $premio_data->id . '.png') }}" alt="">
+                        </div>
+                        <div class="kit-info">
+                            <img src="{{ asset('assets/kit_' . $premio_data->id . '_text.png') }}" alt="">
+                            <p>Stock: {{ $premio_data->stock }}</p>
+                        </div>
                     </div>
-                    <div class="kit-info">
-                        <img src="{{ asset('assets/kit_1_text.png') }}" alt="">
-                    </div>
-                </div>
-                <div class="kit">
-                    <div class="kit-img">
-                        <img src="{{ asset('assets/home_kit_2.png') }}" alt="">
-                    </div>
-                    <div class="kit-info">
-                        <img src="{{ asset('assets/kit_2_text.png') }}" alt="">
-                    </div>
-                </div>
-                <div class="kit">
-                    <div class="kit-img">
-                        <img src="{{ asset('assets/home_kit_3.png') }}" alt="">
-                    </div>
-                    <div class="kit-info">
-                        <img src="{{ asset('assets/kit_3_text.png') }}" alt="">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
         <div class="premios-jugador-container">
-            <img class="premios-ganados-img" src=" {{ asset('assets/premios_ganados_text.png') }} " alt="">
+            <img class="premios-ganados-img" src="{{ asset('assets/premios_ganados_text.png') }}" alt="">
             @foreach ($premios as $premio)
                 <div class="premio-ganado">{{ $premio->premio->descripcion }}</div>
             @endforeach
