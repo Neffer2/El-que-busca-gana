@@ -13,7 +13,7 @@ let rotate = false;
 let enablePost = true;
 
 /* Velocidad */
-let velocidad = 7;
+let velocidad = 5;
 let valocity_handler = true;
 let limite;
 /* --- */
