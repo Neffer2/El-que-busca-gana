@@ -29,14 +29,14 @@
 
             <!-- Email Address -->
             <div class="register-form-group">
-                <label for="email" class="register-form-label">Correo Electrónico</label>
+                <label for="email" class="register-form-label">Correo Electrónico (Corporativo)</label>
                 <input id="email" class="register-form-input" type="email" name="email" :value="old('email')" required autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="register-form-error" />
             </div>
 
             <!-- Address -->
             <div class="register-form-group">
-                <label for="address" class="register-form-label">Direcci&oacute;n de entrega</label>
+                <label for="address" class="register-form-label">Direcci&oacute;n de entrega de tu premio</label>
                 <input id="address" class="register-form-input" type="text" name="address" :value="old('address')" required autocomplete="address" />
                 <x-input-error :messages="$errors->get('address')" class="register-form-error" />
             </div>
