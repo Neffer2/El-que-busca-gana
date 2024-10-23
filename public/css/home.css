@@ -85,6 +85,11 @@
     gap: 10px;
 }
 
+.kit-info p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
 .kit-info img {
     width: 100%;
 }
