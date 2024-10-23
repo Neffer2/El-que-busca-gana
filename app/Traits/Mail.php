@@ -12,7 +12,7 @@ trait Mail
 
         try{
             //Server settings
-            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host       = env('MAIL_HOST');
             $mail->SMTPAuth   = true;
@@ -28,7 +28,7 @@ trait Mail
             //Content
             $mail->isHTML(true);
             $mail->Subject = "Notifiacion - Gana Como Loco";
-            $mail->Body    = view('mails.premio', ['premio' => $premio->mail]);
+            $mail->Body    = view('mails.premio', ['premio' => $premio]);
             $mail->AltBody = "Felicidades, haz ganado el premio Kit 1";
 
             $mail->send();

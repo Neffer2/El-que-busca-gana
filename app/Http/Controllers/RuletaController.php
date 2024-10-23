@@ -40,9 +40,9 @@ class RuletaController extends Controller
             $registro_premio->premio_id = $request->premio;
             $registro_premio->save();
 
-            $user = auth()->user();
-            $user->estado_id = 3;
-            $user->save();
+            // $user = auth()->user();
+            // $user->estado_id = 3;
+            // $user->save();
 
             $this->mailPremio($premio);
 
