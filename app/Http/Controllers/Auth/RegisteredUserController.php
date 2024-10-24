@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Log;
 
 class RegisteredUserController extends Controller
 {
@@ -35,7 +36,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'gpid' => ['required', 'string', 'max:255'],
             'cedula' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
             'address' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'terms' => ['accepted'],
@@ -51,9 +52,13 @@ class RegisteredUserController extends Controller
             'terms' => $request->has('terms'),
         ]);
 
+        Log::info('User registered: ' . $user->id);
+
         event(new Registered($user));
 
         Auth::login($user);
+
+        Log::info('User logged in: ' . $user->id);
 
         return redirect(RouteServiceProvider::HOME);
     }

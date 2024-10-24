@@ -9,35 +9,35 @@
             <!-- Name -->
             <div class="register-form-group">
                 <label for="name" class="register-form-label">Nombre Completo</label>
-                <input id="name" class="register-form-input" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <input id="name" class="register-form-input" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
                 <x-input-error :messages="$errors->get('name')" class="register-form-error" />
             </div>
 
             <!-- GPID -->
             <div class="register-form-group">
                 <label for="gpid" class="register-form-label">GPID</label>
-                <input id="gpid" class="register-form-input" type="text" name="gpid" :value="old('gpid')" required autocomplete="gpid" />
+                <input id="gpid" class="register-form-input" type="text" name="gpid" value="{{ old('gpid') }}" required autocomplete="gpid" />
                 <x-input-error :messages="$errors->get('gpid')" class="register-form-error" />
             </div>
 
             <!-- Cedula -->
             <div class="register-form-group">
                 <label for="cedula" class="register-form-label">Cédula</label>
-                <input id="cedula" class="register-form-input" type="text" name="cedula" :value="old('cedula')" required autocomplete="cedula" />
+                <input id="cedula" class="register-form-input" type="text" name="cedula" value="{{ old('cedula') }}" required autocomplete="cedula" />
                 <x-input-error :messages="$errors->get('cedula')" class="register-form-error" />
             </div>
 
             <!-- Email Address -->
             <div class="register-form-group">
                 <label for="email" class="register-form-label">Correo Electrónico (Corporativo)</label>
-                <input id="email" class="register-form-input" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <input id="email" class="register-form-input" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="register-form-error" />
             </div>
 
             <!-- Address -->
             <div class="register-form-group">
-                <label for="address" class="register-form-label">Direcci&oacute;n de entrega de tu premio</label>
-                <input id="address" class="register-form-input" type="text" name="address" :value="old('address')" required autocomplete="address" />
+                <label for="address" class="register-form-label">Dirección de entrega de tu premio</label>
+                <input id="address" class="register-form-input" type="text" name="address" value="{{ old('address') }}" required autocomplete="address" />
                 <x-input-error :messages="$errors->get('address')" class="register-form-error" />
             </div>
 
