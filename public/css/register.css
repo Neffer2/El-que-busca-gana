@@ -191,11 +191,13 @@
 
 
     .register-logo-container {
-        width: 70%;
+        width: 100%;
         margin-top: 5%;
     }
 
     .register-logo-container img {
+        width: 80%;
+        min-width: 0;
         margin-left: 0;
     }
 
