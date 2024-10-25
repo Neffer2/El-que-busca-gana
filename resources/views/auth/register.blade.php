@@ -10,49 +10,63 @@
             <div class="register-form-group">
                 <label for="name" class="register-form-label">Nombre Completo</label>
                 <input id="name" class="register-form-input" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
-                <x-input-error :messages="$errors->get('name')" class="register-form-error" />
+                @error('name')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- GPID -->
             <div class="register-form-group">
                 <label for="gpid" class="register-form-label">GPID</label>
                 <input id="gpid" class="register-form-input" type="text" name="gpid" value="{{ old('gpid') }}" required autocomplete="gpid" />
-                <x-input-error :messages="$errors->get('gpid')" class="register-form-error" />
+                @error('gpid')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Cedula -->
             <div class="register-form-group">
                 <label for="cedula" class="register-form-label">Cédula</label>
                 <input id="cedula" class="register-form-input" type="text" name="cedula" value="{{ old('cedula') }}" required autocomplete="cedula" />
-                <x-input-error :messages="$errors->get('cedula')" class="register-form-error" />
+                @error('cedula')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Email Address -->
             <div class="register-form-group">
                 <label for="email" class="register-form-label">Correo Electrónico (Corporativo)</label>
                 <input id="email" class="register-form-input" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
-                <x-input-error :messages="$errors->get('email')" class="register-form-error" />
+                @error('email')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Address -->
             <div class="register-form-group">
                 <label for="address" class="register-form-label">Dirección de entrega de tu premio</label>
                 <input id="address" class="register-form-input" type="text" name="address" value="{{ old('address') }}" required autocomplete="address" />
-                <x-input-error :messages="$errors->get('address')" class="register-form-error" />
+                @error('address')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Password -->
             <div class="register-form-group">
                 <label for="password" class="register-form-label">Contraseña</label>
                 <input id="password" class="register-form-input" type="password" name="password" required autocomplete="new-password" />
-                <x-input-error :messages="$errors->get('password')" class="register-form-error" />
+                @error('password')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Confirm Password -->
             <div class="register-form-group">
                 <label for="password_confirmation" class="register-form-label">Confirmar Contraseña</label>
                 <input id="password_confirmation" class="register-form-input" type="password" name="password_confirmation" required autocomplete="new-password" />
-                <x-input-error :messages="$errors->get('password_confirmation')" class="register-form-error" />
+                @error('password_confirmation')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Terms and Privacy Policy -->

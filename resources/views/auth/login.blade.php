@@ -12,7 +12,9 @@
                 <label for="email" class="form-label">Correo Electrónico</label>
                 <input id="email" class="form-input" type="email" name="email" :value="old('email')" required
                     autofocus autocomplete="username" />
-                <x-input-error :messages="$errors->get('email')" class="form-error" />
+                @error('email')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Password -->
@@ -20,7 +22,9 @@
                 <label for="password" class="form-label">Contraseña</label>
                 <input id="password" class="form-input" type="password" name="password" required
                     autocomplete="current-password" />
-                <x-input-error :messages="$errors->get('password')" class="form-error" />
+                @error('password')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <!-- Remember Me -->
