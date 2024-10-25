@@ -80,6 +80,13 @@
     flex-direction: column;
 }
 
+.register-form-error {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+
 .form-group {
     margin-bottom: 15px;
 }
