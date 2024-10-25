@@ -21,7 +21,7 @@
                 <img src="{{ asset('assets/logo.png') }}" alt="">
             </div>
             <div class="como-jugar">
-                <img src="{{ asset('assets/home_como_jugar.png') }}" alt="">
+                <img src="{{ asset('assets/como_jugar.png') }}" alt="">
             </div>
             <div class="kit-container">
                 @foreach ($premios_data as $premio_data)
