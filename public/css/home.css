@@ -14,8 +14,15 @@
     align-items: center;
 }
 
+.logo-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .logo-container img {
-    width: 30%;
+    width: 50%;
 }
 
 .logo-container-desktop {
