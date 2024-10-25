@@ -73,7 +73,7 @@
             <div class="register-form-group">
                 <label for="terms" class="register-form-remember-label">
                     <input id="terms" type="checkbox" class="register-form-checkbox" name="terms" required>
-                    <span class="register-form-checkbox-text">Estoy de acuerdo con el procesamiento de datos y política de privacidad</span>
+                    <a href="https://www.pepsico.com.co/legal/politicas-de-privacidad" target="_blank" class="register-form-checkbox-text">Estoy de acuerdo con el procesamiento de datos y política de privacidad</a>
                 </label>
             </div>
 
