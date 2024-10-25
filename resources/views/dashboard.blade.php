@@ -27,7 +27,7 @@
                 @foreach ($premios_data as $premio_data)
                     <div class="kit">
                         <div class="kit-img">
-                            <img src="{{ asset('assets/home_kit_' . $premio_data->id . '.png') }}" alt="">
+                            <img src="{{ asset('assets/kit_' . $premio_data->id . '.png') }}" alt="">
                         </div>
                         <div class="kit-info">
                             <img src="{{ asset('assets/kit_' . $premio_data->id . '_text.png') }}" alt="">
