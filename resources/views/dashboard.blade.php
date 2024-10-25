@@ -13,12 +13,12 @@
 <body>
     <div class="main-home-container">
         <div class="logo-container-desktop">
-            <img src="{{ asset('assets/logo.png') }}" alt="">
+            <a href="/logout"><img src="{{ asset('assets/logo.png') }}" alt=""></a>
         </div>
 
         <div class="info-container">
             <div class="logo-container">
-                <img src="{{ asset('assets/logo.png') }}" alt="">
+                <a href="/logout"><img src="{{ asset('assets/logo.png') }}" alt=""></a>
             </div>
             <div class="como-jugar">
                 <img src="{{ asset('assets/como_jugar.png') }}" alt="">
