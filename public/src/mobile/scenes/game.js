@@ -13,12 +13,12 @@ let rotate = false;
 let enablePost = true;
 
 /* Velocidad */
-let velocidad = 2;
+let velocidad = 3;
 let valocity_handler = true;
 let limite;
 /* --- */
 /*  */
-
+gi 
 export class Game extends Phaser.Scene {
     constructor ()
     {
