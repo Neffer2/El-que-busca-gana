@@ -19,7 +19,7 @@ export class Tutorial extends Phaser.Scene {
 
         mContext.add.image((width/2), (height/2), 'bg-pop').setScale(1);
         mContext.add.image((width/2), (height/2), 'bg-cj').setScale(1);
-        mContext.add.image((width/2), (height/2) + 90, 'cj').setScale(1);
+        mContext.add.image((width/2), (height/2) + 90, 'cjv1').setScale(1);
         let x = mContext.add.image((width/2) + 240, (height/2) - 450, 'x-cj').setInteractive();
         let continuarBtn = mContext.add.image((width/2), (height) - 85, 'continuar').setInteractive();
 
