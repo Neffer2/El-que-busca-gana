@@ -26,6 +26,7 @@ export class Preloader extends Phaser.Scene {
         this.load.image('cj', 'cj_.png');
         this.load.image('cj_logo', 'cj_logo.png');
         this.load.image('x-cj', 'x-cj.png');
+        this.load.image('continuar', 'continuar_btn.png');
         this.load.spritesheet('luces', 'luces-spritesheet.png', { frameWidth: 797.5, frameHeight: 792 });
 
         let rect2 = this.make.graphics().fillStyle(0xFFFFFF).fillRect(50, 50, 150, 25);
