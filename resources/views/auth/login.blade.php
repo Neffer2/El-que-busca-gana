@@ -10,14 +10,16 @@
             <!-- Email Address -->
             <div class="form-group">
                 <label for="email" class="form-label">Correo Electrónico</label>
-                <input id="email" class="form-input" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <input id="email" class="form-input" type="email" name="email" :value="old('email')" required
+                    autofocus autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="form-error" />
             </div>
 
             <!-- Password -->
             <div class="form-group">
                 <label for="password" class="form-label">Contraseña</label>
-                <input id="password" class="form-input" type="password" name="password" required autocomplete="current-password" />
+                <input id="password" class="form-input" type="password" name="password" required
+                    autocomplete="current-password" />
                 <x-input-error :messages="$errors->get('password')" class="form-error" />
             </div>
 
@@ -25,7 +27,7 @@
             <div class="form-group form-remember">
                 <label for="remember_me" class="form-remember-label">
                     <input id="remember_me" type="checkbox" class="form-checkbox" name="remember">
-                    <span>Recuérdame</span>
+                    <span class="recuerdame-text">Recuérdame</span>
                 </label>
             </div>
 
@@ -35,7 +37,7 @@
                         ¿Has olvidado tu contraseña?
                     </a>
                 @endif --}}
-                <p class="form-link-p">¿No tienes una cuenta?<a href="/register"> Registrate aquí</a></p>
+                <p class="form-link-p">¿No tienes una cuenta?<span><a href="/register"> Registrate aquí</a></span></p>
             </div>
 
             <div class="form-group-button">

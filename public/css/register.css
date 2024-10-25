@@ -18,7 +18,7 @@
 .register-logo-container img {
     width: 100%;
     height: auto;
-    max-width: 750px;
+    max-width: 650px;
     margin-left: 15%;
 }
 
@@ -64,7 +64,7 @@
 
 .register-title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--primary-pink);
     text-transform: uppercase;
@@ -102,7 +102,7 @@
 .register-form-label {
     display: block;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--primary-black);
     font-family: 'MaisonNeueExtendedExtraBold', sans-serif;
 }
@@ -139,7 +139,7 @@
 .register-form-checkbox-text {
     color: var(--primary-black);
     font-family: 'MaisonNeueExtendedExtraBold', sans-serif;
-    font-size: 12px;
+    font-size: 0.7rem;
 }
 
 .register-form-link {
@@ -179,7 +179,7 @@
     color: white;
     border: none;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'MaisonNeueExtendedExtraBold', sans-serif;
