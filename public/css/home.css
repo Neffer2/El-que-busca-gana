@@ -87,7 +87,10 @@
 
 .kit-info p {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    background-color: var(--primary-pink);
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .kit-info img {
