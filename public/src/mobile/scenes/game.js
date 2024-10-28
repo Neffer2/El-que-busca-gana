@@ -18,7 +18,7 @@ let valocity_handler = true;
 let limite;
 /* --- */
 /*  */
-gi 
+
 export class Game extends Phaser.Scene {
     constructor ()
     {
