@@ -126,7 +126,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-top: 20px;
     color: #191613ff;
 }
@@ -194,6 +194,7 @@
     }
 
     .premio-ganado {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        padding: 5px;
     }
 }
