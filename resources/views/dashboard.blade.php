@@ -30,7 +30,7 @@
                             <img src="{{ asset('assets/kit_' . $premio_data->id . '.png') }}" alt="">
                         </div>
                         <div class="kit-info">
-                            <img src="{{ asset('assets/kit_' . $premio_data->id . '_text.png') }}" alt="">
+                            <img src="{{ asset('assets/kit_' . $premio_data->id . '_texto.png') }}" alt="">
                             <p>Stock: {{ $premio_data->stock }}</p>
                         </div>
                     </div>
