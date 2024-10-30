@@ -73,7 +73,7 @@
             <div class="register-form-group">
                 <label for="terms" class="register-form-remember-label">
                     <input id="terms" type="checkbox" class="register-form-checkbox" name="terms" required>
-                    <a href="https://www.pepsico.com.co/legal/politicas-de-privacidad" target="_blank" class="register-form-checkbox-text">He leído, entendido y acepto los términos y condiciones del sitio web</a>
+                    <a href="{{ asset('assets/legal/tyc-gana-como-loco.pdf') }}" target="_blank" class="register-form-checkbox-text">He leído, entendido y acepto los términos y condiciones del sitio web</a>
                 </label>
             </div>
 
