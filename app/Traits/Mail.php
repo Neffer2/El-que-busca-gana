@@ -12,7 +12,7 @@ trait Mail
 
         try{
             //Server settings
-            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            // $mail->SMTPDebug = true;
             $mail->isSMTP();
             $mail->Host       = env('MAIL_HOST');
             $mail->SMTPAuth   = true;
@@ -22,15 +22,17 @@ trait Mail
             $mail->Port       = env('MAIL_PORT', 587);
 
             //Recipients
-            $mail->setFrom(env('MAIL_USERNAME'), 'GanaComoLoco');
+            $mail->setFrom(env('MAIL_USERNAME'), 'Gana Como Loco');
             $mail->addAddress(auth()->user()->email, auth()->user()->name);
+
+            $mail->addAttachment(asset('assets/Mailing/'.$premio->mail), "Descrubre tu premio.jpg");
 
             //Content
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
             $mail->Subject = "¡Tenemos noticias sobre tu premio!";
-            $mail->Body    = view('mails.premio', ['premio' => $premio]);
-            $mail->AltBody = "Felicidades, haz ganado el premio Kit 1";
+            $mail->Body    = view('mails.premio', ['premio' => $premio, 'user' => auth()->user()]);
+            $mail->AltBody = "¡Felicidades, haz ganado!";
 
             $mail->send();
         } catch (Exception $e) {
