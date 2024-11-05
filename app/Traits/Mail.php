@@ -25,7 +25,7 @@ trait Mail
             $mail->setFrom(env('MAIL_USERNAME'), 'Gana Como Loco');
             $mail->addAddress(auth()->user()->email, auth()->user()->name);
 
-            $mail->addAttachment(asset("assets/Mailing/$premio->mail"), "Descrubre tu premio.jpg");
+            $mail->addAttachment("public/assets/Mailing/{$premio->mail}", "Descrubre tu premio.jpg");
 
             //Content
             $mail->isHTML(true);
