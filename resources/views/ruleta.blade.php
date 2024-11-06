@@ -14,7 +14,7 @@
     <script type="module" src="{{ asset('src/phaser.min.js') }}"></script>
     <script type="module" src="{{ asset('src/desk/main.js') }}"></script>
 
-    {{-- <script type="module" src="{{ asset('src/phaser.min.js') }}"></script> --}}
+    <script type="module" src="{{ asset('src/phaser.min.js') }}"></script>
     <script type="module" src="{{ asset('src/mobile/main.js') }}"></script>
 
     <script type="module" src="{{ asset('src/mobile/tools/confetti.js') }}"></script>
