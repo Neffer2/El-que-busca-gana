@@ -36,11 +36,11 @@
             </div>
 
             <div class="form-group-link">
-                {{-- @if (Route::has('password.request'))
-                    <a class="form-link" href="{{ route('password.request') }}">
+                @if (Route::has('password.request'))
+                    <a class="form-link-pass" href="{{ route('password.request') }}">
                         ¿Has olvidado tu contraseña?
                     </a>
-                @endif --}}
+                @endif
                 <p class="form-link-p">¿No tienes una cuenta?<span><a href="/register"> Registrate aquí</a></span></p>
             </div>
 
