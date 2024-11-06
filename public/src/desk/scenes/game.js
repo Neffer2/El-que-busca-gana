@@ -116,7 +116,7 @@ export class Game extends Phaser.Scene {
                             }
                         })
                         .catch(function (error) {
-                            console.log(error);
+                            // console.log(error);
                         });
                     }
                 }, 500);
