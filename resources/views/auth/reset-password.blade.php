@@ -1,39 +1,143 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('password.store') }}">
-        @csrf
+    <style>
+        @font-face {
+            font-family: 'MaisonNeueBold';
+            src: url('../fonts/FontsFree-Net-Maison-Neue-Bold.ttf') format('truetype');
+        }
 
-        <!-- Password Reset Token -->
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+        @font-face {
+            font-family: 'MaisonNeueExtendedExtraBold';
+            src: url('../fonts/MaisonNeueExtended-ExtraBold.otf') format('opentype');
+        }
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'MaisonNeueBold', sans-serif;
+        }
+
+        .main-reset-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/assets/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-gray {
+            color: #4a4a4a;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        .input-error {
+            color: red;
+            margin-top: 0.5rem;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .primary-button {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #ea008a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .primary-button:hover {
+            background-color: #0054a4;
+        }
+    </style>
+
+    <div class="main-reset-container">
+        <div class="container">
+            <form method="POST" action="{{ route('password.store') }}">
+                @csrf
+
+                <!-- Password Reset Token -->
+                <input type="hidden" name="token" value="{{ $request->route('token') }}">
+
+                <!-- Email Address -->
+                <div>
+                    <label for="email" class="input-label">{{ __('Correo Electrónico') }}</label>
+                    <input id="email" class="text-input mt-1" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
+                    <x-input-error :messages="$errors->get('email')" class="input-error mt-2" />
+                </div>
+
+                <!-- Password -->
+                <div class="mt-4">
+                    <label for="password" class="input-label">{{ __('Contraseña') }}</label>
+                    <input id="password" class="text-input mt-1" type="password" name="password" required autocomplete="new-password" />
+                    <x-input-error :messages="$errors->get('password')" class="input-error mt-2" />
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mt-4">
+                    <label for="password_confirmation" class="input-label">{{ __('Confirmar Contraseña') }}</label>
+                    <input id="password_confirmation" class="text-input mt-1" type="password" name="password_confirmation" required autocomplete="new-password" />
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="input-error mt-2" />
+                </div>
+
+                <div class="flex items-center justify-end mt-4">
+                    <button type="submit" class="primary-button">
+                        {{ __('Restablecer Contraseña') }}
+                    </button>
+                </div>
+            </form>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Reset Password') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </div>
 </x-guest-layout>
