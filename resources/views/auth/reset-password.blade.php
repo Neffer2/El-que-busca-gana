@@ -90,12 +90,13 @@
 
         .primary-button {
             width: 100%;
-            padding: 0.5rem 1rem;
+            padding: 1rem 1rem;
             background-color: #ea008a;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         .primary-button:hover {
