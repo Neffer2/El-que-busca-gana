@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -46,6 +48,10 @@
         </div>
 
     </div>
+    {{-- Botón de Whatsapp --}}
+    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+        <i id="whatsapp-btn" class="fab fa-whatsapp"></i>
+    </a>
 </body>
 
 </html>
