@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('cedula');
             $table->string('email')->unique();
             $table->string('address');
+            $table->string('ciudad');
             $table->string('password');
             $table->boolean('terms')->default(false);
             $table->foreign('estado_id')->references('id')->on('estados');

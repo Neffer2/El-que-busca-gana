@@ -42,6 +42,8 @@
                 @enderror
             </div>
 
+            @livewire('ciudades-component')
+
             <!-- Address -->
             <div class="register-form-group">
                 <label for="address" class="register-form-label">Dirección de entrega de tu premio</label>
