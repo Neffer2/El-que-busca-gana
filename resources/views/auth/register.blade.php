@@ -33,6 +33,15 @@
                 @enderror
             </div>
 
+            <!-- Celular -->
+            <div class="register-form-group">
+                <label for="celular" class="register-form-label">N&uacute;mero de celular</label>
+                <input id="celular" class="register-form-input" type="text" name="celular" value="{{ old('celular') }}" required/>
+                @error('celular')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
+            </div>
+
             <!-- Email Address -->
             <div class="register-form-group">
                 <label for="email" class="register-form-label">Correo Electrónico (Corporativo)</label>

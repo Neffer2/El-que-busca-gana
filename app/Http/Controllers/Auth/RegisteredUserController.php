@@ -35,7 +35,8 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'gpid' => ['required', 'string', 'max:255'],
-            'cedula' => ['required', 'string', 'max:255'],
+            'cedula' => ['required', 'string', 'numeric'],
+            'celular' => ['required', 'string', 'numeric'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
             'address' => ['required', 'string', 'max:255'],
             'ciudad' => ['required', 'string', 'max:255'],
@@ -47,6 +48,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'gpid' => $request->gpid,
             'cedula' => $request->cedula,
+            'celular' => $request->celular,
             'email' => $request->email,
             'address' => $request->address,
             'ciudad' => $request->ciudad,

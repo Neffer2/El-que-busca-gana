@@ -2,7 +2,6 @@
     <div class="register-form-group">
         <label for="departamento" class="register-form-label">Departamento</label>
         <select wire:model.live="departamento" id="departamento" class="register-form-input" name="departamento" value="{{ old('departamento') }}" required>
-            <option value="">Seleccionar</option>
             <option>Seleccionar</option>
             @foreach ($departamentos as $departamento)
                 <option value="{{ $departamento->id }}">{{ $departamento->descripcion }}</option>

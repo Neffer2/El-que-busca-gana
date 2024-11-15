@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('gpid');
             $table->string('cedula');
+            $table->string('celular')->nullable();
             $table->string('email')->unique();
             $table->string('address');
             $table->string('ciudad')->nullable();
