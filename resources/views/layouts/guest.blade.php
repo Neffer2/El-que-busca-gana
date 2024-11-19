@@ -23,7 +23,7 @@
             {{ $slot }}
         </div>
         <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/3133440666" class="whatsapp-button" target="_blank">
+        <a href="https://wa.me/+573133440666" class="whatsapp-button" target="_blank">
             <i id="whatsapp-btn" class="fab fa-whatsapp"></i>
         </a>
     </div>
