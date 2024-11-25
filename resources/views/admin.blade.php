@@ -10,7 +10,13 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Administrador</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Administrador</h1>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
         <form method="GET" action="{{ route('admin') }}" class="form-inline mb-4">
             <div class="form-group mr-2">
                 <input type="text" name="search_gpid" class="form-control" placeholder="Buscar por GPID" value="{{ request()->input('search_gpid') }}">
