@@ -12,10 +12,7 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>Administrador</h1>
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="btn btn-danger">Logout</button>
-            </form>
+            <a href="{{ url('/logout') }}" class="btn btn-danger">Logout</a>
         </div>
         <form method="GET" action="{{ route('admin') }}" class="form-inline mb-4">
             <div class="form-group mr-2">
