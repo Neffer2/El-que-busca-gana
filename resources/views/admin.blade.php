@@ -34,7 +34,7 @@
                         <th>Cedula</th>
                         <th>Celular</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        <th>Dirección</th>
                         <th>Ciudad</th>
                         <th>Estado</th>
                         <th>Fecha de Registro</th>
