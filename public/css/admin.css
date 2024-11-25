@@ -1,0 +1,50 @@
+/* admin.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    min-width: 800px; /* Ajusta este valor según sea necesario */
+    margin-top: 20px;
+}
+
+thead.thead-light th {
+    background-color: #f8f9fa;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .form-inline {
+        justify-content: center;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -6,16 +6,34 @@ use Illuminate\Http\Request;
 use App\Models\Premio;
 use App\Models\RegistroPremio;
 use App\Traits\Mail;
+use App\Models\User;
 
 class RuletaController extends Controller
 {
     use Mail;
 
-    public function index()
+    public function index(Request $request)
     {
-        if (auth()->user()->estado_id != 1) {
-            $premios = RegistroPremio::where('user_id', auth()->user()->id)->get();
+        $user = auth()->user();
 
+        if ($user->estado_id == 4) {
+            $query = User::query();
+
+            if ($request->has('search_gpid')) {
+                $searchGpid = $request->input('search_gpid');
+                $query->where('gpid', 'like', "%{$searchGpid}%");
+            }
+
+            if ($request->has('search_email')) {
+                $searchEmail = $request->input('search_email');
+                $query->where('email', 'like', "%{$searchEmail}%");
+            }
+
+            $users = $query->paginate(5)->appends($request->except('page'));
+
+            return view('admin', ['users' => $users]);
+        } else if ($user->estado_id == 2 || $user->estado_id == 3) {
+            $premios = RegistroPremio::where('user_id', $user->id)->get();
             $premios_data = Premio::all();
 
             return view('dashboard', ['premios' => $premios, 'premios_data' => $premios_data]);
@@ -27,10 +45,10 @@ class RuletaController extends Controller
     public function getPremio(Request $request)
     {
         $premio = Premio::find($request->premio);
-        if ($premio->stock < 1){
+        if ($premio->stock < 1) {
             return response()->json([
                 'status' => 255, // No stock
-                'message' => 'Opps, por el momento no tenemos disponibilidad de este premio. Pero no te preocupes, puedes seleccionar cualinténtalo de nuevo.'
+                'message' => 'Opps, por el momento no tenemos disponibilidad de este premio. Pero no te preocupes, puedes intentarlo de nuevo.'
             ]);
         }
 
