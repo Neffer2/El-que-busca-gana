@@ -37,6 +37,7 @@
                         <th>Address</th>
                         <th>Ciudad</th>
                         <th>Estado</th>
+                        <th>Fecha de Registro</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +64,7 @@
                                     {{ $user->estado_id ?? 'null' }}
                                 @endif
                             </td>
+                            <td>{{ $user->created_at ?? 'null' }}</td>
                         </tr>
                     @endforeach
                 </tbody>
