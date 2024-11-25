@@ -8,14 +8,13 @@ h1 {
     color: #333;
 }
 
-.table-container {
+.table-responsive {
     width: 100%;
     overflow-x: auto;
 }
 
 .table {
     width: 100%;
-    min-width: 800px; /* Ajusta este valor según sea necesario */
     margin-top: 20px;
 }
 

@@ -24,8 +24,8 @@
             <button type="submit" class="btn btn-primary mr-2">Buscar</button>
             <a href="{{ route('admin') }}" class="btn btn-secondary">Limpiar</a>
         </form>
-        <div class="table-container">
-            <table class="table table-bordered">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
                 <thead class="thead-light">
                     <tr>
                         <th>ID</th>
