@@ -24,8 +24,8 @@ class User extends Authenticatable
         'gpid',
         'cedula',
         'celular',
-        'address',
-        'ciudad',
+        'sede',
+        'canales',
         'terms',
     ];
 

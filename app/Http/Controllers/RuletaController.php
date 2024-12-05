@@ -53,8 +53,8 @@ class RuletaController extends Controller
         }
 
         if ($premio->stock > 0) {
-            $premio->stock = $premio->stock - 1;
-            $premio->save();
+            //! $premio->stock = $premio->stock - 1; // No se debe restar el stock en este punto - validación de stock cuando se definan los ganadores
+            // $premio->save();
 
             $registro_premio = new RegistroPremio;
             $registro_premio->user_id = auth()->user()->id;

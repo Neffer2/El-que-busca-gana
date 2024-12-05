@@ -35,7 +35,7 @@
 
             <!-- Celular -->
             <div class="register-form-group">
-                <label for="celular" class="register-form-label">N&uacute;mero de celular</label>
+                <label for="celular" class="register-form-label">Número de celular</label>
                 <input id="celular" class="register-form-input" type="text" name="celular" value="{{ old('celular') }}" required/>
                 @error('celular')
                     <p class="register-form-error">{{ $message }}</p>
@@ -44,23 +44,41 @@
 
             <!-- Email Address -->
             <div class="register-form-group">
-                <label for="email" class="register-form-label">Correo Electrónico (Corporativo)</label>
+                <label for="email" class="register-form-label">Correo Electrónico</label>
                 <input id="email" class="register-form-input" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
                 @error('email')
                     <p class="register-form-error">{{ $message }}</p>
                 @enderror
             </div>
 
-            @livewire('ciudades-component')
-
-            <!-- Address -->
+            <!-- Sede -->
             <div class="register-form-group">
-                <label for="address" class="register-form-label">Dirección de entrega de tu premio</label>
-                <input id="address" class="register-form-input" type="text" name="address" value="{{ old('address') }}" required autocomplete="address" />
-                @error('address')
+                <label for="sede" class="register-form-label">Sede</label>
+                <select id="sede" class="register-form-input" name="sede" required>
+                    <option value="" disabled selected>Seleccione una sede</option>
+                    <option value="Sede 1">Sede 1</option>
+                    <option value="Sede 2">Sede 2</option>
+                    <option value="Sede 3">Sede 3</option>
+                </select>
+                @error('sede')
                     <p class="register-form-error">{{ $message }}</p>
                 @enderror
             </div>
+
+            <!-- Canales -->
+            <div class="register-form-group">
+                <label for="canales" class="register-form-label">Canales</label>
+                <select id="canales" class="register-form-input" name="canales" required>
+                    <option value="" disabled selected>Seleccione un canal</option>
+                    <option value="Canal 1">Canal 1</option>
+                    <option value="Canal 2">Canal 2</option>
+                    <option value="Canal 3">Canal 3</option>
+                </select>
+                @error('canales')
+                    <p class="register-form-error">{{ $message }}</p>
+                @enderror
+            </div>
+
 
             <!-- Password -->
             <div class="register-form-group">

@@ -38,8 +38,8 @@ class RegisteredUserController extends Controller
             'cedula' => ['required', 'string', 'numeric'],
             'celular' => ['required', 'string', 'numeric'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
-            'address' => ['required', 'string', 'max:255'],
-            'ciudad' => ['required', 'string', 'max:255'],
+            'sede' => ['required', 'string', 'max:255'],
+            'canales' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'terms' => ['accepted'],
         ]);
@@ -50,8 +50,8 @@ class RegisteredUserController extends Controller
             'cedula' => $request->cedula,
             'celular' => $request->celular,
             'email' => $request->email,
-            'address' => $request->address,
-            'ciudad' => $request->ciudad,
+            'sede' => $request->sede,
+            'canales' => $request->canales,
             'password' => Hash::make($request->password),
             'terms' => $request->has('terms'),
         ]);

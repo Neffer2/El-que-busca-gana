@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('cedula');
             $table->string('celular')->nullable();
             $table->string('email')->unique();
-            $table->string('address');
-            $table->string('ciudad')->nullable();
+            $table->string('sede')->nullable();
+            $table->string('canales')->nullable();
             $table->string('password');
             $table->boolean('terms')->default(false);
             $table->foreign('estado_id')->references('id')->on('estados');
-            $table->foreignId('estado_id')->default(2);
+            $table->foreignId('estado_id')->default(1);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
