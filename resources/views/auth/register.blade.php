@@ -18,9 +18,9 @@
 
             <!-- GPID -->
             <div class="register-form-group">
-                <label for="gpid" class="register-form-label">GPID</label>
+                <label for="gpid" class="register-form-label">GPID (Si aplica)</label>
                 <input id="gpid" class="register-form-input" type="text" name="gpid" value="{{ old('gpid') }}"
-                    required autocomplete="gpid" />
+                    autocomplete="gpid" />
                 @error('gpid')
                     <p class="register-form-error">{{ $message }}</p>
                 @enderror
@@ -48,7 +48,7 @@
 
             <!-- Email Address -->
             <div class="register-form-group">
-                <label for="email" class="register-form-label">Correo Electrónico</label>
+                <label for="email" class="register-form-label">Correo Electrónico (Coorporativo si aplica)</label>
                 <input id="email" class="register-form-input" type="email" name="email" value="{{ old('email') }}"
                     required autocomplete="username" />
                 @error('email')
@@ -58,7 +58,7 @@
 
             <!-- Sede -->
             <div class="register-form-group">
-                <label for="sede" class="register-form-label">Sede</label>
+                <label for="sede" class="register-form-label">Sede (PEC)</label>
                 <select id="sede" class="register-form-input" name="sede" required>
                     <option value="" disabled selected>Seleccione una sede</option>
                     <optgroup label="ITAGUI - DC HUB">
@@ -113,6 +113,7 @@
                     <optgroup label="NEIVA">
                         <option value="NEIVA">CRA 18 B # 50 - 38</option>
                     </optgroup>
+                    <option value="Moderno">Canal Moderno</option>
                 </select>
                 @error('sede')
                     <p class="register-form-error">{{ $message }}</p>
@@ -129,7 +130,6 @@
                     <option value="proxi">Proxi</option>
                     <option value="Mayor">Mayor</option>
                     <option value="Moderno">Moderno</option>
-                    <option value="OT">OT</option>
                 </select>
                 @error('canales')
                     <p class="register-form-error">{{ $message }}</p>
