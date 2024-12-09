@@ -3,6 +3,7 @@
 namespace App\Traits;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Illuminate\Support\Facades\Http;
 
 trait Mail
 {
@@ -35,6 +36,26 @@ trait Mail
             $mail->AltBody = "¡Felicidades, haz ganado!";
 
             $mail->send();
+
+            // Enviar SMS
+            $response = Http::withHeaders([
+                'Accept' => 'application/json',
+                'Account' => env('HABLAME_ACCOUNT'),
+                'ApiKey' => env('HABLAME_APIKEY'),
+                'Content-Type' => 'application/json',
+                'Token' => env('HABLAME_TOKEN'),
+            ])->post('https://api103.hablame.co/api/sms/v3/send/priority', [
+                'toNumber' => '57' . auth()->user()->celular,
+                'sms' => '🎉 Felicidades ' . auth()->user()->name . '. Has sido el ganador del ' . $premio->descripcion . '. Tu premio será enviado 🚀 al PEC que has seleccionado. ¡Esperamos que disfrutes tu premio!',
+                'flash' => '0',
+                'sc' => '890202',
+                'request_dlvr_rcpt' => '0'
+            ]);
+
+            if ($response->failed()) {
+                throw new Exception('Error al enviar el SMS: ' . $response->body());
+            }
+
         } catch (Exception $e) {
             return redirect()->back()->withErrors("Error: {$mail->ErrorInfo}")->withInput();
         }
