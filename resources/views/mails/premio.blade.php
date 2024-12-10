@@ -14,6 +14,6 @@
     <br>
     ¡Felicidades!
 
-    Pero la diversi&oacute;n no termina aqu&iacute;, a&uacute;n puedes seguir participando en nuestra promoci&oacute;n y ganar m&aacute;s premios.
+    ¡Esperemos que disfrutes tu premio!.
 </body>
 </html>
