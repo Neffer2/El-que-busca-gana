@@ -24,7 +24,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('/assets/bg.jpg');
+            background-image: url('/assets/fondo_login_registro.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -94,7 +94,7 @@
         .primary-button {
             width: 100%;
             padding: 0.5rem 1rem;
-            background-color: #ea008a;
+            background: radial-gradient(circle, #3cb7ba 10%, #216466 90%);
             color: white;
             border: none;
             border-radius: 5px;
