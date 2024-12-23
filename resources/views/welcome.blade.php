@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ time() }}">
-    <title>El que busca gana</title>
+    <link rel="icon" type="image/png" href="https://ganacomolococolombia.com/favicon.png">
+    <title>El Que Busca Gana</title>
 
     <!-- Fonts -->
 

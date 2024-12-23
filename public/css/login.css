@@ -1,6 +1,8 @@
 :root {
     --primary-pink: #ea008a;
     --primary-blue: #0054a4;
+    --primary-light-blue: #216466;
+    --primary-acua: #3cb7ba;
     --primary-black: #191613ff;
     --primary-gold: #c3a52d;
     --secondary-gold: #c5aa2e;
@@ -69,7 +71,7 @@
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--primary-pink);
+    color: var(--primary-blue);
     text-transform: uppercase;
     font-family: 'MaisonNeueExtendedExtraBold', sans-serif;
 }
@@ -179,7 +181,7 @@
 
 .form-link-p a {
     text-decoration: none;
-    color: var(--primary-pink);
+    color: var(--primary-blue);
     cursor: pointer;
 }
 
@@ -194,7 +196,8 @@
 .form-button {
     width: 65%;
     padding: 10px;
-    background: linear-gradient(to right, var(--primary-blue), var(--primary-pink));
+    /* background: linear-gradient(to right, var(--primary-blue), var(--primary-pink)); */
+    background-color: var(--primary-light-blue);
     color: white;
     border: none;
     border-radius: 20px;
@@ -210,7 +213,8 @@
     .main-register-login-container {
         flex-direction: column;
         background-image: url(../assets/fondo_login_registro_mobile.jpg);
-        background-position: 70%;
+        background-position: center;
+        background-size: cover;
     }
 
     .logo-container {

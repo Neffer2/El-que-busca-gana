@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EL QUE BUSCA GANA</title>
     <link rel="stylesheet" href="{{ asset('css/ruleta-device.css') }}?v={{ time() }}">
+    <link rel="icon" type="image/png" href="https://ganacomolococolombia.com/favicon.png">
 </head>
 <body>
     <div id="game-container-desk"></div>
