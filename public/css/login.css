@@ -163,7 +163,7 @@
 .form-link-pass:hover{
     text-decoration: underline;
     cursor: pointer;
-    color: var(--primary-pink);
+    color: var(--primary-blue);
 }
 
 .form-link-p {
@@ -185,6 +185,10 @@
     cursor: pointer;
 }
 
+.form-link-p a:hover {
+    text-decoration: underline;
+}
+
 .form-group-button {
     margin-bottom: 15px;
     width: 100%;
@@ -197,7 +201,7 @@
     width: 65%;
     padding: 10px;
     /* background: linear-gradient(to right, var(--primary-blue), var(--primary-pink)); */
-    background-color: var(--primary-light-blue);
+    background: radial-gradient(circle,var(--primary-acua) 10%, var(--primary-light-blue) 90%);
     color: white;
     border: none;
     border-radius: 20px;
