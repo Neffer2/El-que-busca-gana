@@ -8,7 +8,7 @@
 </head>
 <body>
     <h3>¡Hola {{ $user->name }}!</h3>
-    <p>¡Tenemos grandes noticias para ti!  ¡Eres uno de los afortunados ganadores de nuestra promoción Gana Como Loco!</p>
+    <p>¡Tenemos grandes noticias para ti!  ¡Eres uno de los afortunados ganadores de nuestra promoción El Que Busca Gana!</p>
 
     Has ganado el: {{ $premio->descripcion }}.
     <br>

@@ -23,7 +23,7 @@ trait Mail
             $mail->Port       = env('MAIL_PORT', 587);
 
             //Recipients
-            $mail->setFrom(env('MAIL_USERNAME'), 'Gana Como Loco');
+            $mail->setFrom(env('MAIL_USERNAME'), 'El Que Busca Gana');
             $mail->addAddress(auth()->user()->email, auth()->user()->name);
 
             $mail->addAttachment("assets/Mailing/{$premio->mail}", "Descrubre tu premio.jpg");

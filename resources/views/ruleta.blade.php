@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GANA COMO LOCO</title>
+    <title>EL QUE BUSCA GANA</title>
     <link rel="stylesheet" href="{{ asset('css/ruleta-device.css') }}?v={{ time() }}">
 </head>
 <body>
